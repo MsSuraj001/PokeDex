@@ -42,7 +42,7 @@ function PokemonList() {
 
   return (
     <div className='pokemon-list-wrapper'>
-      <div>List of pokemons</div>
+      <div className='pokemon-heading'>List-of-Pokemons</div>
 
         <div className='pokemon-wrapper'>
             {(isLoading) ? 'Loading....' : 
@@ -50,6 +50,10 @@ function PokemonList() {
             }
         </div>
       
+      <div className='control'>
+        <button>Prev</button>
+        <button>Next</button>
+      </div>
     </div>
   )
 }
