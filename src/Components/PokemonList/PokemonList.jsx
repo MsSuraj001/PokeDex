@@ -6,7 +6,9 @@ import usePokemonList from '../../hooks/usePokemonList';
 
 function PokemonList() {
 
-  const {pokemonListState, setPokemonListState} = usePokemonList();
+const {pokemonListState, setPokemonListState} = usePokemonList();  // It's not working
+
+                        // *** Importent note -> useState main pokedexUrl can be changed the pokemonUrl
 
     // const [pokemonList, setpokemonList] = useState([])
     // const [isLoading, setIsLoading] = useState(true)
@@ -81,8 +83,8 @@ function PokemonList() {
         </div>
       
       <div className='control'>
-        <button disabled={pokemonListState.prevUrl == null} onClick={ () => setPokemonListState({ ...pokemonListState, pokedexUrl : pokemonListState.prevUrl})}>Prev</button>
-        <button disabled={pokemonListState.nextUrl == null} onClick={ () => setPokemonListState({ ...pokemonListState, pokedexUrl : pokemonListState.nextUrl})}>Next</button>
+        <button disabled={pokemonListState.prevUrl == null} onClick={ () => setPokemonListState({ ...pokemonListState, pokemonUrl : pokemonListState.prevUrl})}>Prev</button>
+        <button disabled={pokemonListState.nextUrl == null} onClick={ () => setPokemonListState({ ...pokemonListState, pokemonUrl : pokemonListState.nextUrl})}>Next</button>
       </div>
     </div>
   )
